@@ -1,0 +1,279 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>GitHub Copilot ワークショップ</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="github-copilot-workshop"
+                  title="GitHub Copilot ワークショップ"
+                  environment="web"
+                  feedback-link="https://example.com/feedback">
+    
+      <google-codelab-step label="ワークショップについて" duration="5">
+        <p>GitHub Copilotワークショップへようこそ！このワークショップでは、GitHub Copilot を使ってコードの解説や改善を行う方法を学びます。 GitHub Copilot Chat は Chat 体験を通じて AI との対話を行うことができます。 ぜひ、このワークショップを通じて GitHub Copilot の使い方を学んでみましょう。</p>
+<p class="image-container"><img alt="GitHub Copilot Logo" src="img/dcd9c52ce37f5b19.png"></p>
+<h2 is-upgraded>本日のゴール</h2>
+<ul>
+<li>GitHub Copilotの各種機能を理解する</li>
+<li>エージェントモードを使って、新規にアプリケーションを開発する</li>
+</ul>
+<h2 is-upgraded>前提条件</h2>
+<ul>
+<li>Visual Studio Code がインストールされていること</li>
+<li>GitHub Copilotのライセンスがあること</li>
+<li>GitHubアカウントを持っていること</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="コード補完を使ってみる" duration="10">
+        <p>GitHub Copilotの基本的なコード補完機能を体験してみましょう。</p>
+<h2 is-upgraded>Copilot拡張機能のインストール</h2>
+<ol type="1">
+<li><strong>GitHub Copilot</strong> 拡張機能をインストール</li>
+<li><strong>GitHub Copilot Chat</strong> 拡張機能をインストール</li>
+</ol>
+<h2 is-upgraded>設定確認</h2>
+<p>VS Codeでサインインが完了していることを確認してください。</p>
+<h2 is-upgraded>コード補完を試してみる</h2>
+<p>新しいPythonファイルを作成して、以下のコメントを入力してみましょう：</p>
+<pre><code language="language-python" class="language-python"># Fibonacci数列を計算する関数
+def fibonacci(n):
+</code></pre>
+<p>Copilotが自動的にコードを提案してくれることを確認してください。</p>
+<p>Positive : <strong>ヒント</strong>: <code>Tab</code>キーで提案を受け入れ、<code>Alt+]</code>で次の提案を見ることができます。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Next Edit Suggestionを使ってみる" duration="10">
+        <h2 is-upgraded>Next Edit Suggestionとは</h2>
+<p>Next Edit Suggestionは、現在のコードの文脈に基づいて、次に行うべき編集を提案してくれる機能です。</p>
+<h2 is-upgraded>使ってみよう</h2>
+<ol type="1">
+<li>先ほど作成したfibonacci関数に以下のコメントを追加：</li>
+</ol>
+<pre><code language="language-python" class="language-python"># TODO: エラーハンドリングを追加
+</code></pre>
+<ol type="1" start="2">
+<li><code>Ctrl+Shift+P</code> (macOSでは <code>Cmd+Shift+P</code>) でコマンドパレットを開く</li>
+<li>&#34;GitHub Copilot: Open Completions Panel&#34; を選択</li>
+<li>提案される編集内容を確認</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Copilot Chat ハンズオンの準備" duration="5">
+        <h2 is-upgraded>Chat機能の起動</h2>
+<ol type="1">
+<li>VS Codeのサイドバーで <strong>Chat</strong> アイコンをクリック</li>
+<li>または <code>Ctrl+Alt+I</code> (macOSでは <code>Cmd+Alt+I</code>) でChatパネルを開く</li>
+</ol>
+<h2 is-upgraded>Chatの基本的な使い方</h2>
+<p>Chatパネルで以下のように質問してみましょう：</p>
+<pre><code>こんにちは！Python初心者です。よろしくお願いします。
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="コードを解説してもらう" duration="15">
+        <h2 is-upgraded>コード解説機能を使う</h2>
+<ol type="1">
+<li>先ほど作成したfibonacci関数を選択</li>
+<li>右クリックして「Copilot」→「Explain This」を選択</li>
+<li>または選択した状態でChatで <code>/explain</code> コマンドを使用</li>
+</ol>
+<h2 is-upgraded>より詳細な解説を求める</h2>
+<p>Chatで以下のように質問してみましょう：</p>
+<pre><code>このfibonacci関数の計算量について教えてください。また、より効率的な実装方法はありますか？
+</code></pre>
+<h2 is-upgraded>他の言語での実装を聞く</h2>
+<pre><code>この関数をJavaScriptで実装するとどうなりますか？
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="コードの改善箇所を尋ねる" duration="15">
+        <h2 is-upgraded>コードレビュー機能</h2>
+<p>現在のコードを改善するために、Copilot Chatに以下のように質問してみましょう：</p>
+<pre><code>このPythonコードを改善してください。パフォーマンス、可読性、エラーハンドリングの観点から提案をお願いします。
+</code></pre>
+<h2 is-upgraded>セキュリティの観点から確認</h2>
+<pre><code>このコードにセキュリティ上の問題はありますか？
+</code></pre>
+<h2 is-upgraded>ベストプラクティスの確認</h2>
+<pre><code>Pythonのベストプラクティスに従っているか確認してください。
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="エージェントモードを使ってみよう" duration="10">
+        <h2 is-upgraded>エージェントとは</h2>
+<p>GitHub Copilot のエージェント機能は、特定のタスクに特化したAIアシスタントです。</p>
+<h2 is-upgraded>利用可能なエージェント</h2>
+<ul>
+<li><code>@workspace</code> - ワークスペース全体の理解</li>
+<li><code>@vscode</code> - VS Code の操作</li>
+<li><code>@terminal</code> - ターミナルコマンドの支援</li>
+</ul>
+<h2 is-upgraded>エージェントを使ってみる</h2>
+<p>Chatで以下のコマンドを試してみましょう：</p>
+<pre><code>@workspace このプロジェクトの構成を教えてください
+</code></pre>
+<pre><code>@vscode Python用の便利な拡張機能を教えてください
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="ポモドーロタイマーを作ってみよう" duration="30">
+        <h2 is-upgraded>プロジェクトの概要</h2>
+<p>ポモドーロテクニック用のタイマーアプリケーションを作成します。</p>
+<h2 is-upgraded>必要な機能</h2>
+<ul>
+<li>25分の作業タイマー</li>
+<li>5分の休憩タイマー</li>
+<li>タイマーの開始・停止・リセット</li>
+<li>音声通知</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="ポモドーロタイマーの設計を考える" duration="10">
+        <h2 is-upgraded>設計をCopilotと一緒に考える</h2>
+<p>Chatで以下のように質問してみましょう：</p>
+<pre><code>ポモドーロタイマーアプリを作りたいです。どのような設計にすればよいでしょうか？PythonとTkinterを使用したいと思います。
+</code></pre>
+<h2 is-upgraded>技術選定</h2>
+<pre><code>Pythonでタイマーアプリを作る場合、どのライブラリがおすすめですか？GUI、音声再生、設定保存の観点から教えてください。
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="やることを洗い出そう" duration="10">
+        <h2 is-upgraded>タスクの整理</h2>
+<p>Copilot Chatで以下のように依頼してみましょう：</p>
+<pre><code>ポモドーロタイマーアプリの開発において、必要なタスクを整理してください。優先順位も含めて教えてください。
+</code></pre>
+<h2 is-upgraded>ファイル構成の検討</h2>
+<pre><code>このアプリケーションのファイル構成はどうすればよいでしょうか？保守性を考慮した構成を提案してください。
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="実装しよう" duration="30">
+        <h2 is-upgraded>メインアプリケーションの作成</h2>
+<p>Copilot Chatで以下のように依頼：</p>
+<pre><code>ポモドーロタイマーのメインアプリケーションを作成してください。Tkinterを使用し、以下の機能を含めてください：
+- タイマー表示
+- スタート/ストップボタン
+- リセットボタン
+- 作業時間と休憩時間の切り替え
+</code></pre>
+<h2 is-upgraded>段階的な実装</h2>
+<ol type="1">
+<li>まず基本的なGUIを作成</li>
+<li>タイマー機能を追加</li>
+<li>音声通知機能を追加</li>
+<li>設定保存機能を追加</li>
+</ol>
+<h2 is-upgraded>コードの生成と改良</h2>
+<p>各機能について、Copilotに実装を依頼し、提案されたコードを確認・改良していきます。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="テストを書こう" duration="20">
+        <h2 is-upgraded>テストの重要性</h2>
+<p>Copilot Chatでテストについて質問：</p>
+<pre><code>作成したポモドーロタイマーアプリのテストを書きたいです。どのようなテストが必要でしょうか？Pythonのunittestを使用したいと思います。
+</code></pre>
+<h2 is-upgraded>テストコードの生成</h2>
+<pre><code>タイマークラスの単体テストを作成してください。時間の計算、状態の管理、イベントの発火などをテストしたいです。
+</code></pre>
+<h2 is-upgraded>テストの実行</h2>
+<p>生成されたテストコードを実行して、アプリケーションが正しく動作することを確認します。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="残りの機能を実装しよう" duration="20">
+        <h2 is-upgraded>追加機能の実装</h2>
+<p>基本機能が完成したら、以下の追加機能を実装してみましょう：</p>
+<pre><code>ポモドーロタイマーに以下の機能を追加したいです：
+- 設定ファイルでタイマー時間をカスタマイズ
+- 統計機能（完了したポモドーロ数の記録）
+- システムトレイ対応
+- 通知音のカスタマイズ
+</code></pre>
+<h2 is-upgraded>機能の優先順位付け</h2>
+<pre><code>これらの機能の実装優先順位を決めたいです。ユーザー体験の向上と開発工数を考慮して提案してください。
+</code></pre>
+<h2 is-upgraded>段階的な実装</h2>
+<p>優先度の高い機能から順番に実装していきます。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="おめでとうございます 🎉" duration="5">
+        <h2 is-upgraded>今日学んだこと</h2>
+<p>このワークショップでは以下のことを学びました：</p>
+<ul>
+<li>GitHub Copilotの基本的な使い方</li>
+<li>Copilot Chatでのコード解説・改善</li>
+<li>エージェント機能の活用</li>
+<li>実際のアプリケーション開発でのCopilot活用</li>
+</ul>
+<h2 is-upgraded>次のステップ</h2>
+<ul>
+<li>実際のプロジェクトでCopilotを活用してみる</li>
+<li>より複雑なアプリケーション開発に挑戦する</li>
+<li>Copilotの新機能をキャッチアップする</li>
+</ul>
+<h2 is-upgraded>リソース</h2>
+<ul>
+<li><a href="https://docs.github.com/copilot" target="_blank">GitHub Copilot Documentation</a></li>
+<li><a href="https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot" target="_blank">GitHub Copilot ベストプラクティス</a></li>
+</ul>
+<p>お疲れさまでした！</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
