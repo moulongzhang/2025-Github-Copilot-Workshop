@@ -537,7 +537,7 @@ Copilot Chat にこのコードを解説させてみましょう。
 ### Copilot Chat を開く
 
 1. VS Codeのサイドバーで **Chat** アイコン（チャットバブルのアイコン）をクリックして、Copilot Chat を開きます
-2. または `Ctrl+Alt+I` (macOSでは `Cmd+Alt+I`) でChatパネルを開く
+2. または `Ctrl+Alt+I` (macOSでは `Ctrl+Cmd+I`) でChatパネルを開く
 
 ### チャットモードの確認
 
