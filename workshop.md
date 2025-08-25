@@ -30,7 +30,7 @@ Duration: 15
 
 このワークショップでは、以下のGitHubリポジトリを使用します：
 
-**プロジェクトURL**: https://github.com/moulongzhang/20250708-Python-Project
+**プロジェクトURL**: https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python
 
 ### セットアップ方法
 
@@ -58,13 +58,13 @@ Duration: 15
 2. 以下のコマンドでリポジトリをクローン：
 
 ```bash
-git clone https://github.com/moulongzhang/20250708-Python-Project.git
+git clone https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python.git
 ```
 
 3. クローンしたディレクトリに移動：
 
 ```bash
-cd 20250708-Python-Project
+cd 2025-Github-Copilot-Workshop-Python
 ```
 
 4. VS Codeでプロジェクトを開く：
