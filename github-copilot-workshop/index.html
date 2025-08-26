@@ -611,9 +611,18 @@ if __name__ == &#34;__main__&#34;:
 
       </google-codelab-step>
     
-      <google-codelab-step label="高度な設定（オプション）" duration="20">
+      <google-codelab-step label="次のタスクに向けた設定（オプション）" duration="20">
         <p>このセクションは <strong>オプション</strong> です。GitHub Copilotの基本機能を学んだ後で、より高度な機能を試したい場合に実施してください。</p>
-<h2 is-upgraded>1. GitHub Advanced Security (GHAS) の設定</h2>
+<h2 is-upgraded>1. ブランチの準備</h2>
+<h3 is-upgraded>ステップ1: ステージングされた変更をリセット</h3>
+<p>現在ステージングエリアにある変更を全てワーキングディレクトリに戻します：</p>
+<pre><code language="language-bash" class="language-bash">git restore .
+</code></pre>
+<h3 is-upgraded>ステップ2: 新しいブランチを作成</h3>
+<p>feature/pomodoroブランチを作成して切り替えます：</p>
+<pre><code language="language-bash" class="language-bash">git checkout -b feature/pomodoro
+</code></pre>
+<h2 is-upgraded>2. GitHub Advanced Security (GHAS) の設定</h2>
 <p>GitHub Advanced Security の Code Scanning 機能を有効にすることで、コードの脆弱性を自動的に検出できます。</p>
 <ol type="1">
 <li>フォークしたリポジトリの <strong>Settings</strong> タブをクリック</li>
@@ -629,7 +638,7 @@ if __name__ == &#34;__main__&#34;:
 <li><strong>Enable CodeQL</strong> をクリック</li>
 </ol>
 <p>これにより、プッシュ時やプルリクエスト作成時にコードの自動スキャンが実行されます。</p>
-<h2 is-upgraded>2. Copilot 機能の確認</h2>
+<h2 is-upgraded>3. Copilot 機能の確認</h2>
 <p>GitHubで利用可能なCopilot機能を確認しましょう。</p>
 <ol type="1">
 <li>GitHubの右上のプロフィールアイコンをクリック</li>
@@ -644,7 +653,7 @@ if __name__ == &#34;__main__&#34;:
 </ul>
 <aside class="warning"><p><strong>プラン制限</strong>: Copilot Code ReviewやCoding Agentなどの高度な機能は、GitHub Copilot Business/Enterprise プランでのみ利用可能です。Freeプランをご利用の場合、これらの機能は利用できません。</p>
 </aside>
-<h2 is-upgraded>3. GitHub MCP Server のセットアップ</h2>
+<h2 is-upgraded>4. GitHub MCP Server のセットアップ</h2>
 <p>Model Context Protocol (MCP) サーバーを使用することで、Copilotの機能を拡張できます。</p>
 <h3 is-upgraded>ステップ1: MCP サーバーの追加</h3>
 <ol type="1">
@@ -833,7 +842,24 @@ git push origin feature/pomodoro-timer
 その後、適切なコミットメッセージでコミットいただき、リモートブランチに変更をPushしてください。
 </code></pre>
 <p class="image-container"><img alt="MCP による Git ワークフロー" src="img/26ebf645a750b3a6.png"></p>
-<aside class="special"><p><strong>MCP の利点</strong>: MCPサーバーを使用すると、CopilotがGitの操作を自動化し、適切なコミットメッセージの生成から実際のPushまでを一貫して実行できます。</p>
+<p>続いて、実装計画をGitHub Issuesとして管理していきます：</p>
+<pre><code>plan.mdの各ステップをGitHub issuesとして起票してください
+</code></pre>
+<p>この指示により、Copilotは以下を実行します：</p>
+<ol type="1">
+<li><code>plan.md</code> の内容を読み取り</li>
+<li>各ステップを個別のIssueとして起票</li>
+<li>各Issueには以下が含まれます： <ul>
+<li>ステップのタイトルと詳細説明</li>
+<li>実装すべき機能の要件</li>
+<li>受け入れ条件</li>
+<li>適切なラベルと優先度</li>
+</ul>
+</li>
+</ol>
+<p>これにより、計画的なプロジェクト管理とアジャイル開発が可能になります。</p>
+<p class="image-container"><img alt="MCP Issues" src="img/b03e6ea597ff6ae3.png"></p>
+<aside class="special"><p><strong>MCP の利点</strong>: GitHub MCPサーバーを使用することで、Copilotがリポジトリの情報、Issues、Pull Requests、ブランチ情報などのGitHubメタデータに直接アクセスし、より詳細な分析や提案を行うことができます。</p>
 </aside>
 
 

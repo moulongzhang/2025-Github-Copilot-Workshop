@@ -680,12 +680,30 @@ DeliveryManagerクラスに存在する問題点を列挙してください。�
 >
 > **重要**: エージェントモードでは、Copilotがより自律的に動作するため、提案される変更内容をよく確認してから受け入れるようにしましょう。
 
-## 高度な設定（オプション）
+## 次のタスクに向けた設定（オプション）
 Duration: 20
 
 このセクションは **オプション** です。GitHub Copilotの基本機能を学んだ後で、より高度な機能を試したい場合に実施してください。
 
-### 1. GitHub Advanced Security (GHAS) の設定
+### 1. ブランチの準備
+
+#### ステップ1: ステージングされた変更をリセット
+
+現在ステージングエリアにある変更を全てワーキングディレクトリに戻します：
+
+```bash
+git restore .
+```
+
+#### ステップ2: 新しいブランチを作成
+
+feature/pomodoroブランチを作成して切り替えます：
+
+```bash
+git checkout -b feature/pomodoro
+```
+
+### 2. GitHub Advanced Security (GHAS) の設定
 
 GitHub Advanced Security の Code Scanning 機能を有効にすることで、コードの脆弱性を自動的に検出できます。
 
@@ -703,7 +721,7 @@ GitHub Advanced Security の Code Scanning 機能を有効にすることで、�
 
 これにより、プッシュ時やプルリクエスト作成時にコードの自動スキャンが実行されます。
 
-### 2. Copilot 機能の確認
+### 3. Copilot 機能の確認
 
 GitHubで利用可能なCopilot機能を確認しましょう。
 
@@ -722,7 +740,7 @@ GitHubで利用可能なCopilot機能を確認しましょう。
 >
 > **プラン制限**: Copilot Code ReviewやCoding Agentなどの高度な機能は、GitHub Copilot Business/Enterprise プランでのみ利用可能です。Freeプランをご利用の場合、これらの機能は利用できません。
 
-### 3. GitHub MCP Server のセットアップ
+### 4. GitHub MCP Server のセットアップ
 
 Model Context Protocol (MCP) サーバーを使用することで、Copilotの機能を拡張できます。
 
@@ -996,9 +1014,31 @@ MCPサーバーを設定済みの方は、エージェントモードでCopilot�
 
 ![MCP による Git ワークフロー](github-copilot-workshop/img/mcp-git-workflow.png)
 
+
+続いて、実装計画をGitHub Issuesとして管理していきます：
+
+```
+plan.mdの各ステップをGitHub issuesとして起票してください
+```
+
+この指示により、Copilotは以下を実行します：
+
+1. `plan.md` の内容を読み取り
+2. 各ステップを個別のIssueとして起票
+3. 各Issueには以下が含まれます：
+   - ステップのタイトルと詳細説明
+   - 実装すべき機能の要件
+   - 受け入れ条件
+   - 適切なラベルと優先度
+
+これにより、計画的なプロジェクト管理とアジャイル開発が可能になります。
+
+![MCP Issues](github-copilot-workshop/img/mcp-issues.png)
+
 > aside positive
 >
-> **MCP の利点**: MCPサーバーを使用すると、CopilotがGitの操作を自動化し、適切なコミットメッセージの生成から実際のPushまでを一貫して実行できます。
+> **MCP の利点**: GitHub MCPサーバーを使用することで、Copilotがリポジトリの情報、Issues、Pull Requests、ブランチ情報などのGitHubメタデータに直接アクセスし、より詳細な分析や提案を行うことができます。
+
 
 ## GitHub.com上でのGitHub Copilot
 Duration: 15
