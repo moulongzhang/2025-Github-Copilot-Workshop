@@ -30,7 +30,7 @@
     
       <google-codelab-step label="ワークショップについて" duration="5">
         <p>GitHub Copilotワークショップへようこそ！このワークショップでは、GitHub Copilot を使ってコードの解説や改善を行う方法を学びます。 GitHub Copilot Chat は Chat 体験を通じて AI との対話を行うことができます。 ぜひ、このワークショップを通じて GitHub Copilot の使い方を学んでみましょう。</p>
-<p class="image-container"><img alt="GitHub Copilot Logo" src="img/dcd9c52ce37f5b19.png"></p>
+<p class="image-container"><img alt="GitHub Copilot Logo" src="../../img/dcd9c52ce37f5b19.png"></p>
 <h2 is-upgraded>本日のゴール</h2>
 <ul>
 <li>GitHub Copilotの各種機能を理解する</li>
@@ -55,11 +55,11 @@
 <li>プロジェクトURL（https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python）をブラウザで開く</li>
 <li>右上の <strong>Fork</strong> ボタンをクリック</li>
 </ol>
-<p class="image-container"><img alt="Fork ボタンをクリック" src="img/57690ce147443e0a.png"></p>
+<p class="image-container"><img alt="Fork ボタンをクリック" src="../../img/57690ce147443e0a.png"></p>
 <ol type="1" start="3">
 <li>フォーク作成画面で <strong>Create fork</strong> ボタンをクリック</li>
 </ol>
-<p class="image-container"><img alt="Create fork ボタンをクリック" src="img/92b19af6bb66c85d.png"></p>
+<p class="image-container"><img alt="Create fork ボタンをクリック" src="../../img/92b19af6bb66c85d.png"></p>
 <p>フォークが完成すると、あなたのGitHubアカウントにリポジトリのコピーが作成されます。</p>
 <h2 is-upgraded>ステップ2: 開発環境のセットアップ</h2>
 <p>フォークしたリポジトリを使って、以下のいずれかの方法でプロジェクトを開始できます：</p>
@@ -70,7 +70,7 @@
 <li><strong>Codespaces</strong> タブを選択</li>
 <li><strong>Create codespace on main</strong> をクリック</li>
 </ol>
-<p class="image-container"><img alt="Codespaces Setup" src="img/da697969a846a2d4.png"></p>
+<p class="image-container"><img alt="Codespaces Setup" src="../../img/da697969a846a2d4.png"></p>
 <aside class="special"><p><strong>ヒント</strong>: Codespacesを使用すると、ブラウザ上でVS Codeと同じ環境が立ち上がり、すぐに開発を始められます。</p>
 </aside>
 <h3 is-upgraded>方法B: ローカル環境でクローンする</h3>
@@ -585,17 +585,17 @@ if __name__ == &#34;__main__&#34;:
         <p>ここまでは「質問」モードでCopilot Chatを使ってきましたが、次は「エージェント」モードを使ってみましょう。エージェントは、ユーザーの意図を理解し、より自律的にタスクを実行することができます。実例を通して、エージェントがどのように機能するかを学びます。</p>
 <h2 is-upgraded>エージェントモードへの切り替え</h2>
 <p>まず <code>delivery_manager.py</code> ファイルを開いている状態で、Copilot Chatのモード選択から「エージェント」を選択します。</p>
-<p class="image-container"><img alt="エージェントモード選択2" style="width: 600.00px" src="img/bcc926772d6a58dd.png">   </p>
-<p class="image-container"><img alt="エージェントモード選択" style="width: 600.00px" src="img/428f81215165ebb9.png"></p>
+<p class="image-container"><img alt="エージェントモード選択2" style="width: 600.00px" src="../../img/bcc926772d6a58dd.png">   </p>
+<p class="image-container"><img alt="エージェントモード選択" style="width: 600.00px" src="../../img/428f81215165ebb9.png"></p>
 <h2 is-upgraded>問題点の洗い出し</h2>
 <p>その後、以下のプロンプトを入力してみましょう。</p>
 <pre><code>DeliveryManagerクラスに存在する問題点を列挙してください。そして、それぞれの問題点を解決するための改善案を提示してください。
 </code></pre>
-<p class="image-container"><img alt="GPT-4.1による問題点分析" src="img/960f54c952f11b7e.png"></p>
+<p class="image-container"><img alt="GPT-4.1による問題点分析" src="../../img/960f54c952f11b7e.png"></p>
 <p>すると、複数の改善点を提案してくれるはずです。</p>
 <h2 is-upgraded>モデルを変えて試してみてください</h2>
 <p>同じ質問を異なるモデルで試すことで、各モデルの特徴を比較できます。</p>
-<p class="image-container"><img alt="Claude 4.0による問題点分析" src="img/aea2847314548d11.png"></p>
+<p class="image-container"><img alt="Claude 4.0による問題点分析" src="../../img/aea2847314548d11.png"></p>
 <h2 is-upgraded>改善案の実装</h2>
 <p>では、実際に提案してもらった改善案を実装してもらいましょう。</p>
 <pre><code>提示してくれたすべての改善案を実装してください。
@@ -629,11 +629,11 @@ if __name__ == &#34;__main__&#34;:
 <li>左サイドバーから <strong>Security</strong> → <strong>Code security</strong> を選択</li>
 <li><strong>Code scanning</strong> セクションで <strong>Set up</strong> をクリック</li>
 </ol>
-<p class="image-container"><img alt="GHAS Code Scanning Setup" src="img/96a57e2d2f8719ce.png"></p>
+<p class="image-container"><img alt="GHAS Code Scanning Setup" src="../../img/96a57e2d2f8719ce.png"></p>
 <ol type="1" start="4">
 <li><strong>Default</strong> を選択（推奨）</li>
 </ol>
-<p class="image-container"><img alt="GHAS Default Configuration" src="img/e4bb34522ad67510.png"></p>
+<p class="image-container"><img alt="GHAS Default Configuration" src="../../img/e4bb34522ad67510.png"></p>
 <ol type="1" start="5">
 <li><strong>Enable CodeQL</strong> をクリック</li>
 </ol>
@@ -644,7 +644,7 @@ if __name__ == &#34;__main__&#34;:
 <li>GitHubの右上のプロフィールアイコンをクリック</li>
 <li><strong>Your Copilot</strong> を選択</li>
 </ol>
-<p class="image-container"><img alt="Your Copilot Menu" src="img/cd8cb696a64d45f7.png"></p>
+<p class="image-container"><img alt="Your Copilot Menu" src="../../img/cd8cb696a64d45f7.png"></p>
 <p>以下の機能が有効になっていることを確認してください：</p>
 <ul>
 <li><strong>Copilot in GitHub.com</strong> - GitHubのWebサイト上でCopilotを使用</li>
@@ -660,7 +660,7 @@ if __name__ == &#34;__main__&#34;:
 <li>VS Code でコマンドパレットを開く: <code>Ctrl+Shift+P</code> (Windows/Linux) / <code>Cmd+Shift+P</code> (Mac)</li>
 <li><code>mcp: add server</code> と入力して選択</li>
 </ol>
-<p class="image-container"><img alt="MCP Add Server" src="img/daaeee38e7f7841.png"></p>
+<p class="image-container"><img alt="MCP Add Server" src="../../img/daaeee38e7f7841.png"></p>
 <ol type="1" start="3">
 <li><strong>HTTP</strong> を選択</li>
 <li>サーバーURL: <code>https://api.githubcopilot.com/mcp/</code> を入力</li>
@@ -670,17 +670,17 @@ if __name__ == &#34;__main__&#34;:
 </ol>
 <h3 is-upgraded>ステップ2: MCP サーバーの起動確認</h3>
 <p><code>.vscode/mcp.json</code> にMCPサーバーの設定が保存されます。</p>
-<p class="image-container"><img alt="MCP JSON Config" src="img/b091c4e566965094.png"></p>
+<p class="image-container"><img alt="MCP JSON Config" src="../../img/b091c4e566965094.png"></p>
 <h3 is-upgraded>ステップ3: ツールの有効化</h3>
 <ol type="1">
 <li>Copilot Chat でツールボタンをクリック</li>
 </ol>
-<p class="image-container"><img alt="MCP Tools Button" src="img/f08d67d89c4bd3e9.png"></p>
+<p class="image-container"><img alt="MCP Tools Button" src="../../img/f08d67d89c4bd3e9.png"></p>
 <ol type="1" start="2">
 <li>GitHub MCP サーバーがリストに表示されることを確認</li>
 <li>チェックボックスにチェックを入れて有効化</li>
 </ol>
-<p class="image-container"><img alt="MCP Enable Tools" src="img/d4c85eab549c0355.png"></p>
+<p class="image-container"><img alt="MCP Enable Tools" src="../../img/d4c85eab549c0355.png"></p>
 <p>これで、GitHub の情報を直接 Copilot Chat で参照できるようになります。</p>
 <aside class="special"><p><strong>ヒント</strong>: MCP サーバーを使用すると、Copilot がリポジトリの情報、Issues、Pull Requests などに直接アクセスして、より詳細な回答や提案を行うことができます。</p>
 </aside>
@@ -692,7 +692,7 @@ if __name__ == &#34;__main__&#34;:
         <p>ここまでで、VS Code上で利用できるGitHub Copilotの基本的な使い方を学びました。次は、実際にアプリケーションを開発してみましょう。</p>
 <p>今回のハンズオンでは、ポモドーロタイマーアプリケーションを開発します。このアプリケーションは、作業時間と休憩時間を設定し、タイマーを管理する機能を持っています。</p>
 <p>以下のようなUIを持つアプリケーションを作成することを目指します。</p>
-<p class="image-container"><img alt="ポモドーロタイマーUI" src="img/8e24c2d7e6a91e1b.png"></p>
+<p class="image-container"><img alt="ポモドーロタイマーUI" src="../../img/8e24c2d7e6a91e1b.png"></p>
 <p>では、まずVS Code上で、新しいPythonファイルを作成しましょう。今回はWebアプリケーションとして作成したいので、Flaskを使用します。メインファイル名は「app.py」としましょう。</p>
 <h2 is-upgraded>プロジェクトの概要</h2>
 <p>ポモドーロテクニック用のWebタイマーアプリケーションを作成します。</p>
@@ -713,8 +713,8 @@ if __name__ == &#34;__main__&#34;:
         <p>まず、いきなり実装を始めるのではなく、どういった方針・設計で進めるかをCopilotに相談してみましょう。ここから先は、すべてエージェントモードで進めていきます。</p>
 <p>今回のようにUIを持ったWebアプリケーションを作成するにあたって役に立つのが、Copilot Chatに画像をアップロードする機能です。これを使うことで、アプリケーションのUIイメージをCopilotに理解させることができます。</p>
 <p>前ページのUIイメージをまずはプロジェクトのルートに <code>pomodoro.png</code> として保存してください。その後、チャット欄の <code>Add Context</code> をクリックし、「Image from Clipboard」または「Files &amp; Folders...」を選択します。そして、UIイメージの画像を選択します。</p>
-<p class="image-container"><img alt="VS Code Copilot Chat Context Menu" src="img/32ba4d287403b2f9.png"></p>
-<p class="image-container"><img alt="VS Code Copilot Chat Context Menu" src="img/aadb91ba110fa522.png"></p>
+<p class="image-container"><img alt="VS Code Copilot Chat Context Menu" src="../../img/32ba4d287403b2f9.png"></p>
+<p class="image-container"><img alt="VS Code Copilot Chat Context Menu" src="../../img/aadb91ba110fa522.png"></p>
 <p>画像のアップロードができたら、Copilot Chatに画像が表示されます。</p>
 <p>その上で、次のプロンプトを入力してみましょう。</p>
 <pre><code>このプロジェクトでポモドーロタイマーのWebアプリを作成する予定です。添付の画像はそのアプリのUIモックです。FlaskとHTML/CSS/JavaScriptを使用してこのアプリを作成するにあたって、どのような設計で進めるべきか、アーキテクチャの提案をしてください。
@@ -736,8 +736,8 @@ if __name__ == &#34;__main__&#34;:
         <p>ここまでで、UIモックとアーキテクチャの設計が固まりました。具体的にどのような機能を実装する必要があるかを検討していきましょう。これもCopilot Chatに相談してみます。その際、pomodoro.pngとarchitecture.mdを添付しましょう。</p>
 <pre><code>このポモドーロタイマーアプリケーションを作成するにあたって、実装する必要のある機能を洗い出してください。
 </code></pre>
-<p class="image-container"><img alt="機能一覧の検討" style="width: 400.00px" src="img/8e24c2d7e6a91e1b.png"></p>
-<p class="image-container"><img alt="機能洗い出しの例" src="img/20a6ec3e5b2f7c50.png"></p>
+<p class="image-container"><img alt="機能一覧の検討" style="width: 400.00px" src="../../img/8e24c2d7e6a91e1b.png"></p>
+<p class="image-container"><img alt="機能洗い出しの例" src="../../img/20a6ec3e5b2f7c50.png"></p>
 <p>この内容もCopilotとのチャットを通して、改善していきましょう。内容が固まったら、アーキテクチャの時と同様にこの内容もfeatures.mdというファイルにまとめて保存しておきましょう。</p>
 <pre><code>ありがとうございます。その内容で良さそうなので、実装する必要のある機能一覧をfeatures.mdというファイルに書いてください。
 </code></pre>
@@ -759,7 +759,7 @@ if __name__ == &#34;__main__&#34;:
 <pre><code>plan.mdのステップ１を実装してください。その際、すでにこのプロジェクトにあるファイルを別のディレクトリに移動する必要があれば、その作業も実行してください。もし追加で考慮が必要なことがあれば、私に質問してください。
 </code></pre>
 <p>すると、私のケースでは以下のように検討が必要な質問をしてきました。こういった場合には、必要な情報を提供しましょう。</p>
-<p class="image-container"><img alt="Copilotからの質問例" src="img/8254991301cd47cd.png"></p>
+<p class="image-container"><img alt="Copilotからの質問例" src="../../img/8254991301cd47cd.png"></p>
 <p>その後、Copilotは、ステップ1の実装を行います。実装が完了したら、Copilotは自らの判断でプロジェクトのビルドを行い、エラーがないかを確認します。エラーが発生した場合は、そのエラーを解決するために追加で修正を行います。このような自律的な動作が、エージェントモードの特徴です。</p>
 <p>実装が完了したら、以下の点を確認してみましょう：</p>
 <ol type="1">
@@ -768,7 +768,7 @@ if __name__ == &#34;__main__&#34;:
 <li><strong>動作確認</strong>：簡単な動作テストを行って、エラーが発生していないか</li>
 </ol>
 <p>以下が、私の場合のステップ1の実装結果です。この段階でどのようなアプリケーションになっているかは人によって異なるでしょう。</p>
-<p class="image-container"><img alt="ステップ1実装結果例" src="img/99241f822533e37a.png"></p>
+<p class="image-container"><img alt="ステップ1実装結果例" src="../../img/99241f822533e37a.png"></p>
 
 
       </google-codelab-step>
@@ -781,7 +781,7 @@ if __name__ == &#34;__main__&#34;:
 <pre><code>現在の実装に対して、ユニットテストが全くないので、ユニットテストを実装してください。
 </code></pre>
 <p>すると、Copilotエージェントはユニットテスト用の依存関係をインストールするために、コマンドを使って良いかどうかを尋ねてきます。このように、エージェントが何かのコマンドを実行する前には、必ずユーザーに確認を求めます。ここでは、必要なコマンドを実行することを許可するために、「Continue」をクリックします。</p>
-<p class="image-container"><img alt="Copilotによるテスト実装確認" src="img/c724e1c653e2c6b3.png"></p>
+<p class="image-container"><img alt="Copilotによるテスト実装確認" src="../../img/c724e1c653e2c6b3.png"></p>
 <p>すると、CopilotはVS Code内のターミナル内で、先ほどのコマンドを実行し、必要な依存関係をインストールします。それ以降も同様に、Copilotが何かのコマンドを実行する前には、必ずユーザーに確認を求めます。もし、そのコマンドを実行してエラーが発生した場合は、そのエラーを解決するために、エージェントは追加の修正を行います。</p>
 
 
@@ -831,7 +831,7 @@ git push origin feature/pomodoro-timer
 <li><strong>変更されたファイル</strong>の横にある <strong>+</strong> ボタンをクリックして、ステージングに追加</li>
 <li>✨ボタンをクリックして、Copilotにコミットメッセージを生成させる</li>
 </ol>
-<p class="image-container"><img alt="Source Control でのコミット" src="img/10f6739b9515ce77.png"></p>
+<p class="image-container"><img alt="Source Control でのコミット" src="../../img/10f6739b9515ce77.png"></p>
 <ol type="1" start="4">
 <li><strong>Commit</strong> ボタン（青いボタン）をクリックしてリモートブランチにPush</li>
 </ol>
@@ -841,7 +841,7 @@ git push origin feature/pomodoro-timer
 
 その後、適切なコミットメッセージでコミットいただき、リモートブランチに変更をPushしてください。
 </code></pre>
-<p class="image-container"><img alt="MCP による Git ワークフロー" src="img/26ebf645a750b3a6.png"></p>
+<p class="image-container"><img alt="MCP による Git ワークフロー" src="../../img/26ebf645a750b3a6.png"></p>
 <p>続いて、実装計画をGitHub Issuesとして管理していきます：</p>
 <pre><code>plan.mdの各ステップをGitHub issuesとして起票してください
 </code></pre>
@@ -858,7 +858,7 @@ git push origin feature/pomodoro-timer
 </li>
 </ol>
 <p>これにより、計画的なプロジェクト管理とアジャイル開発が可能になります。</p>
-<p class="image-container"><img alt="MCP Issues" src="img/b03e6ea597ff6ae3.png"></p>
+<p class="image-container"><img alt="MCP Issues" src="../../img/b03e6ea597ff6ae3.png"></p>
 <aside class="special"><p><strong>MCP の利点</strong>: GitHub MCPサーバーを使用することで、Copilotがリポジトリの情報、Issues、Pull Requests、ブランチ情報などのGitHubメタデータに直接アクセスし、より詳細な分析や提案を行うことができます。</p>
 </aside>
 
@@ -873,13 +873,13 @@ git push origin feature/pomodoro-timer
 <li><strong>Open a pull request</strong> をクリック</li>
 <li>Pull Request作成画面で、<strong>Copilotのアイコン</strong> » <strong>Summary</strong> をクリック</li>
 </ol>
-<p class="image-container"><img alt="Pull RequestでのCopilot Summary" src="img/f379c36d2daae6be.png"></p>
+<p class="image-container"><img alt="Pull RequestでのCopilot Summary" src="../../img/f379c36d2daae6be.png"></p>
 <p>Copilotが自動的にPull Requestの概要を生成してくれます。</p>
 <h2 is-upgraded>Copilotをレビュワーとしてアサイン</h2>
 <p><strong>Reviewers</strong> セクションで <strong>Copilot</strong> をアサインすることで、Copilotをレビュワーとしてアサインし、コードのレビューを依頼できます。</p>
 <aside class="special"><p><strong>自動アサインの設定</strong>: Settings » Branches » Rulesets » Require a pull request before merging » Automatically request Copilot code reviewにチェックを入れることで、Pull Requestを開いた時、自動的にCopilotがアサインされるようになります。</p>
 </aside>
-<p class="image-container"><img alt="Copilot自動アサインの設定" src="img/bc9c16ab7a83d165.png"></p>
+<p class="image-container"><img alt="Copilot自動アサインの設定" src="../../img/bc9c16ab7a83d165.png"></p>
 <h2 is-upgraded>Copilot Code Reviewの結果確認</h2>
 <p>Pull Requestが開かれた後、Copilot Code Reviewの結果を閲覧できます：</p>
 <ul>
@@ -887,18 +887,18 @@ git push origin feature/pomodoro-timer
 <li><strong>指摘事項</strong>: 潜在的な問題点の指摘</li>
 <li><strong>改善提案</strong>: コードの品質向上のための具体的な提案</li>
 </ul>
-<p class="image-container"><img alt="Copilot Code Reviewの概要" src="img/190eae2847f8b194.png"></p>
+<p class="image-container"><img alt="Copilot Code Reviewの概要" src="../../img/190eae2847f8b194.png"></p>
 <h2 is-upgraded>GitHub Advanced Securityによる静的脆弱性スキャン</h2>
 <p>Pull Requestには、GitHub Advanced Security（GHAS）による静的脆弱性スキャンの結果も表示されます：</p>
 <h3 is-upgraded>セキュリティアラートの確認</h3>
-<p class="image-container"><img alt="GHAS セキュリティアラート" src="img/a5a70f95b612809a.png"></p>
+<p class="image-container"><img alt="GHAS セキュリティアラート" src="../../img/a5a70f95b612809a.png"></p>
 <ul>
 <li><strong>高セキュリティ脆弱性</strong>: 重要度の高いセキュリティ問題</li>
 <li><strong>Copilot Autofix</strong>: AIによる自動修正提案</li>
 <li><strong>詳細な説明</strong>: 脆弱性の内容と修正方法</li>
 </ul>
 <h3 is-upgraded>チェック結果の詳細</h3>
-<p class="image-container"><img alt="GHAS チェック結果" src="img/b79fd737fef0ad88.png"></p>
+<p class="image-container"><img alt="GHAS チェック結果" src="../../img/b79fd737fef0ad88.png"></p>
 <aside class="special"><p><strong>Copilot Autofixの活用</strong>: GitHubは検出されたセキュリティ脆弱性に対して、Copilot Autofixによる自動修正提案を提供します。これにより、セキュリティ問題を迅速に解決できます。</p>
 </aside>
 
@@ -938,7 +938,7 @@ git push origin feature/pomodoro-timer
 ストリーク表示: 連続日数のカウント表示
 テスト目的: ゲーミフィケーション要素がモチベーション維持と継続利用に与える影響を測定
 </code></pre>
-<p class="image-container"><img alt="GitHub Copilotでのissue作成" src="img/a69389a1032d0aab.png"></p>
+<p class="image-container"><img alt="GitHub Copilotでのissue作成" src="../../img/a69389a1032d0aab.png"></p>
 <h2 is-upgraded>Issueの作成とCoding Agentのアサイン</h2>
 <ol type="1">
 <li><strong>Copilotが3つのIssueを自動生成</strong>します</li>
@@ -946,7 +946,7 @@ git push origin feature/pomodoro-timer
 <li><strong>Create</strong> ボタンをクリックして各Issueを作成</li>
 <li>Issue画面に遷移後、<strong>Assignees</strong> セクションで <strong>Copilot</strong> を選択してCoding Agentをアサイン</li>
 </ol>
-<p class="image-container"><img alt="Coding AgentをIssueにアサイン" src="img/14fa8fd6031e20b8.png"></p>
+<p class="image-container"><img alt="Coding AgentをIssueにアサイン" src="../../img/14fa8fd6031e20b8.png"></p>
 <h2 is-upgraded>期待されるPull Requestの結果</h2>
 <p>Coding Agentがアサインされると、以下のような結果が期待できます：</p>
 <ul>
@@ -955,11 +955,11 @@ git push origin feature/pomodoro-timer
 <li><strong>包括的なテスト</strong>: 単体テストとUIテストの両方を含む</li>
 </ul>
 <h3 is-upgraded>パターンA: 視覚的フィードバックの強化</h3>
-<p class="image-container"><img alt="視覚的フィードバック強化のPR結果" src="img/705e39500bad3885.png"></p>
+<p class="image-container"><img alt="視覚的フィードバック強化のPR結果" src="../../img/705e39500bad3885.png"></p>
 <h3 is-upgraded>パターンB: カスタマイズ性の向上</h3>
-<p class="image-container"><img alt="カスタマイズ性向上のPR結果" src="img/8184bbbafbf918ee.png"></p>
+<p class="image-container"><img alt="カスタマイズ性向上のPR結果" src="../../img/8184bbbafbf918ee.png"></p>
 <h3 is-upgraded>パターンC: ゲーミフィケーション要素の追加</h3>
-<p class="image-container"><img alt="ゲーミフィケーション要素のPR結果" src="img/3e0271a144640fba.png"></p>
+<p class="image-container"><img alt="ゲーミフィケーション要素のPR結果" src="../../img/3e0271a144640fba.png"></p>
 <aside class="special"><p><strong>MCP Serverの活用</strong>: GitHub MCP ServerとPlaywright MCP Serverが初期設定としてCoding Agentに含まれています。これにより、単体テストだけではなく、スクリーンショットによるUIの自動チェックも行うことができます。Coding Agentは実装した機能が期待通りに動作するかを視覚的に検証し、より品質の高いコードを提供します。</p>
 </aside>
 
