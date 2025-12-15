@@ -49,9 +49,7 @@ Duration: 15
 
 ### ステップ2: 開発環境のセットアップ
 
-フォークしたリポジトリを使って、以下のいずれかの方法でプロジェクトを開始できます：
-
-#### 方法A: GitHub Codespacesを使用する（推奨）
+フォークしたリポジトリを使って、GitHub Codespacesで開発環境を準備します：
 
 1. フォークしたリポジトリのページで（`https://github.com/[あなたのユーザー名]/2025-Github-Copilot-Workshop-Python`）
 2. 緑色の **Code** ボタンをクリック
@@ -62,60 +60,19 @@ Duration: 15
 
 > aside positive
 >
-> **ヒント**: Codespacesを使用すると、ブラウザ上でVS Codeと同じ環境が立ち上がり、すぐに開発を始められます。
-
-
-#### 方法B: ローカル環境でクローンする
-
-ローカルにVS Codeがインストールされている場合：
-
-1. ターミナルまたはコマンドプロンプトを開く
-2. 以下のコマンドでフォークしたリポジトリをクローン：
-
-```bash
-git clone https://github.com/[あなたのユーザー名]/2025-Github-Copilot-Workshop-Python.git
-```
-
-3. クローンしたディレクトリに移動：
-
-```bash
-cd 2025-Github-Copilot-Workshop-Python
-```
-
-4. VS Codeでプロジェクトを開く：
-
-```bash
-code .
-```
-
-### ステップ3: 必要な拡張機能のインストール
-
-プロジェクトを開いたら、以下の拡張機能をインストールしてください：
-
-1. **GitHub Copilot** 拡張機能をインストール
-2. **GitHub Copilot Chat** 拡張機能をインストール
-3. **Python** 拡張機能をインストール
-
-### ステップ4: 設定確認
-
-1. VS CodeでGitHubアカウントにサインインが完了していることを確認
-2. Copilot機能が有効になっていることを確認
-3. Pythonインタープリターが正しく設定されていることを確認
+> **ヒント**: Codespacesを使用すると、ブラウザ上でVS Codeと同じ環境が立ち上がり、すぐに開発を始められます。このプロジェクトには `.devcontainer/devcontainer.json` ファイルが含まれており、Codespaces起動時に以下が自動的に設定されます：
+> - **Python 3.11 環境**: 開発に必要なPython環境
+> - **GitHub Copilot 拡張機能**: AIによるコード補完とチャット機能
+> - **CodeTour 拡張機能**: プロジェクトのガイドツアー機能
 
 ## コード補完を使ってみる
-Duration: 10
-
-GitHub Copilotの基本的なコード補完機能を体験してみましょう。
-
-### Copilot拡張機能のインストール
-
-1. **GitHub Copilot** 拡張機能をインストール
-2. **GitHub Copilot Chat** 拡張機能をインストール
+Duration: 20
 
 ### 設定確認
+
 VS Codeでサインインが完了していることを確認してください。
 
-### コード補完を試してみる
+### 1. コード補完でFibonacci関数を作成
 
 新しいPythonファイルを作成して、以下のコメントを入力してみましょう：
 
@@ -130,61 +87,7 @@ Copilotが自動的にコードを提案してくれることを確認してく�
 >
 > **ヒント**: `Tab`キーで提案を受け入れ、`Alt+]`で次の提案を見ることができます。
 
-## GitHub Copilot Next Edit Suggestions 有効化手順
-Duration: 10
-
-### 概要
-⚙️ [`github.copilot.nextEditSuggestions.enabled`](vscode://settings/github.copilot.nextEditSuggestions.enabled) は、GitHub Copilotの次世代編集提案機能を有効にする設定です。この機能により、より高度なコード編集の提案を受け取ることができます。
-
-### 1. VS Codeを開く
-
-### 2. 設定画面にアクセス
-以下のいずれかの方法で設定画面を開きます：
-
-#### 方法A: メニューから
-- **Windows/Linux**: `File` → `Preferences` → `Settings`
-- **macOS**: `Code` → `Settings...` → `Settings`
-
-#### 方法B: キーボードショートカット
-- **Windows/Linux**: `Ctrl + ,`
-- **macOS**: `Cmd + ,`
-
-#### 方法C: コマンドパレット
-- `Ctrl + Shift + P` (Windows/Linux) または `Cmd + Shift + P` (macOS)
-- `Preferences: Open Settings (UI)` を選択
-
-### 3. 設定を検索
-設定画面の検索ボックスに以下を入力：
-```
-github.copilot.nextEditSuggestions.enabled
-```
-
-### 4. 設定を有効化
-- 検索結果に表示される設定項目のチェックボックスをオンにする
-- または、`false` を `true` に変更する
-
-### 5. 設定の確認
-設定が正しく適用されているか確認：
-- VS Codeを再起動（推奨）
-- エディタでコードを編集して、新しい提案機能が動作するか確認
-
-### 代替方法: settings.jsonで直接編集
-
-#### 1. settings.jsonファイルを開く
-- `Ctrl + Shift + P` (Windows/Linux) または `Cmd + Shift + P` (macOS)
-- `Preferences: Open User Settings (JSON)` を選択
-
-#### 2. 設定を追加
-```json
-{
-    "github.copilot.nextEditSuggestions.enabled": true
-}
-```
-
-#### 3. ファイルを保存
-- `Ctrl + S` (Windows/Linux) または `Cmd + S` (macOS)
-
-### 実際に試してみよう
+### 2. Next Edit Suggestionsで座標関数を2次元から3次元に拡張
 
 プロジェクトに含まれている `point.py` ファイルを開いてください。このファイルには、二次元空間の点を表すクラスが含まれています：
 
@@ -205,27 +108,19 @@ class Point2D:
         return f"Point2D({self.x}, {self.y})"
 ```
 
-今、このクラスを三次元空間の点を表すクラスに拡張したいと考えています。まずは、クラス名を手動で `Point3D` に変更してみましょう。すると、GitHub Copilotが次の編集候補を提案してくれます。
+今、このクラスを三次元空間の点を表すクラスに拡張したいと考えています。
+
+**ステップ1**: クラス名を手動で `Point2D` から `Point3D` に変更してみましょう。
+
+**ステップ2**: 少し待つと、GitHub Copilotが次の編集候補を提案してくれます。
 
 > aside positive
 >
 > **重要**: Next Edit Suggestionの提案が表示されるまでに、少し時間がかかることがあります。焦らず待ってみてください。
 
-提案では以下のような変更が示されるはずです：
-- `__init__`メソッドに `z` パラメータの追加
-- `self.z = z` の追加
-- `distance_to`メソッドでの三次元距離計算への拡張
-- `__str__`メソッドでのz座標の表示
+#### 期待される最終結果
 
-この状態で `Tab` キーを押すと、GitHub Copilotが提案をしている箇所にカーソルが移動します。そこで、提案を受け入れるには、再度 `Tab` キーを押します。
-
-すると、GitHub Copilotは次の編集候補を提案してくれるはずです。この提案も、`Tab` キーを押すことで受け入れることができます。このように、Next Edit Suggestionを使うことで、コードの編集を効率的に行うことができます。
-
-### 結果を見てみよう
-
-Point2DクラスをPoint3Dに拡張する作業を続けてみましょう。すべてのメソッドを三次元空間に対応させることができるはずです。
-
-期待される最終的なコードの例：
+Point2DクラスをPoint3Dに拡張する作業を続けると、以下のようなコードになるはずです：
 
 ```python
 import math
@@ -246,308 +141,23 @@ class Point3D:
         return f"Point3D({self.x}, {self.y}, {self.z})"
 ```
 
-### TODOコメント付きのコードでも試してみましょう
-
-１行目でコメントアウトされている`二次元`を `三次元`に置き換えてください。
-
-```python
-# 二次元空間の点を表すクラス
-class Point2D:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-    
-    def distance_to(self, other):
-        # TODO: ここに距離計算のコードを追加
-        pass
-    
-    def __str__(self):
-        # TODO: 文字列表現を返す
-        pass
-```
-
-TODOコメントの後にカーソルを置いて、Copilotの提案を確認してみてください。
-
-### 注意事項
-
-- VS Code の GitHub Copilot 拡張機能が最新版にアップデートされていることを確認してください
-- 設定変更後は VS Code の再起動を推奨します
-
-### トラブルシューティング
-
-#### 設定が見つからない場合
-1. GitHub Copilot 拡張機能がインストールされているか確認
-2. 拡張機能が最新版にアップデートされているか確認
-3. VS Code を再起動してから再度試行
-
-#### 機能が動作しない場合
-1. GitHub Copilot にログインしているか確認
-2. インターネット接続を確認
-3. VS Code のコンソールでエラーメッセージを確認
-
-## Copilot Chat ハンズオンの準備
-Duration: 5
-
-### ファイルを作成
-
-下記のファイルを `delivery_manager.py` として保存してください。
-
-```python
-import time
-import random
-from typing import List, Callable, Optional
-from dataclasses import dataclass, field
-from enum import Enum
-
-
-class EventArgs:
-    """イベント引数の基底クラス"""
-    pass
-
-
-class Event:
-    """C#のeventに相当するクラス"""
-    
-    def __init__(self):
-        self._handlers: List[Callable] = []
-    
-    def add_handler(self, handler: Callable):
-        """イベントハンドラーを追加"""
-        if handler not in self._handlers:
-            self._handlers.append(handler)
-    
-    def remove_handler(self, handler: Callable):
-        """イベントハンドラーを削除"""
-        if handler in self._handlers:
-            self._handlers.remove(handler)
-    
-    def invoke(self, sender, args: EventArgs = None):
-        """イベントを発火"""
-        for handler in self._handlers:
-            handler(sender, args or EventArgs())
-
-
-@dataclass
-class KitchenObjectSO:
-    """キッチンオブジェクトのデータクラス"""
-    name: str
-    object_id: int
-
-
-@dataclass
-class RecipeSO:
-    """レシピのデータクラス"""
-    name: str
-    kitchen_object_so_list: List[KitchenObjectSO] = field(default_factory=list)
-
-
-@dataclass
-class RecipeListSO:
-    """レシピリストのデータクラス"""
-    recipe_so_list: List[RecipeSO] = field(default_factory=list)
-
-
-class PlateKitchenObject:
-    """皿のキッチンオブジェクト"""
-    
-    def __init__(self):
-        self._kitchen_object_so_list: List[KitchenObjectSO] = []
-    
-    def add_kitchen_object(self, kitchen_object: KitchenObjectSO):
-        """キッチンオブジェクトを追加"""
-        self._kitchen_object_so_list.append(kitchen_object)
-    
-    def get_kitchen_object_so_list(self) -> List[KitchenObjectSO]:
-        """キッチンオブジェクトリストを取得"""
-        return self._kitchen_object_so_list.copy()
-
-
-class KitchenGameManager:
-    """キッチンゲームマネージャー（Singleton）"""
-    
-    _instance: Optional['KitchenGameManager'] = None
-    
-    def __init__(self):
-        self._is_game_playing = False
-    
-    @classmethod
-    def get_instance(cls) -> 'KitchenGameManager':
-        """Singletonインスタンスを取得"""
-        if cls._instance is None:
-            cls._instance = cls()
-        return cls._instance
-    
-    def is_game_playing(self) -> bool:
-        """ゲームが進行中かどうか"""
-        return self._is_game_playing
-    
-    def start_game(self):
-        """ゲーム開始"""
-        self._is_game_playing = True
-    
-    def stop_game(self):
-        """ゲーム停止"""
-        self._is_game_playing = False
-
-
-class DeliveryManager:
-    """配達管理クラス（Python版）"""
-    
-    _instance: Optional['DeliveryManager'] = None
-    
-    def __init__(self, recipe_list_so: RecipeListSO):
-        # イベント定義
-        self.on_recipe_spawned = Event()
-        self.on_recipe_completed = Event()
-        self.on_recipe_success = Event()
-        self.on_recipe_failed = Event()
-        
-        # プライベート変数
-        self._recipe_list_so = recipe_list_so
-        self._waiting_recipe_so_list: List[RecipeSO] = []
-        self._spawn_recipe_timer = 0.0
-        self._spawn_recipe_timer_max = 4.0
-        self._waiting_recipes_max = 4
-        self._successful_recipes_amount = 0
-        self._last_update_time = time.time()
-    
-    @classmethod
-    def get_instance(cls, recipe_list_so: RecipeListSO = None) -> 'DeliveryManager':
-        """Singletonインスタンスを取得"""
-        if cls._instance is None:
-            if recipe_list_so is None:
-                raise ValueError("初回作成時にはrecipe_list_soが必要です")
-            cls._instance = cls(recipe_list_so)
-        return cls._instance
-    
-    def update(self):
-        """フレーム更新処理（UnityのUpdate相当）"""
-        current_time = time.time()
-        delta_time = current_time - self._last_update_time
-        self._last_update_time = current_time
-        
-        self._spawn_recipe_timer -= delta_time
-        
-        if self._spawn_recipe_timer <= 0.0:
-            self._spawn_recipe_timer = self._spawn_recipe_timer_max
-            
-            kitchen_game_manager = KitchenGameManager.get_instance()
-            if (kitchen_game_manager.is_game_playing() and 
-                len(self._waiting_recipe_so_list) < self._waiting_recipes_max):
-                
-                # ランダムにレシピを選択
-                waiting_recipe_so = random.choice(self._recipe_list_so.recipe_so_list)
-                self._waiting_recipe_so_list.append(waiting_recipe_so)
-                
-                # イベント発火
-                self.on_recipe_spawned.invoke(self)
-    
-    def deliver_recipe(self, plate_kitchen_object: PlateKitchenObject):
-        """レシピの材料と皿の材料が一致しているかどうかを確認する"""
-        
-        for i, waiting_recipe_so in enumerate(self._waiting_recipe_so_list):
-            plate_ingredients = plate_kitchen_object.get_kitchen_object_so_list()
-            
-            # 材料数が一致するかチェック
-            if len(waiting_recipe_so.kitchen_object_so_list) == len(plate_ingredients):
-                plate_contents_matches_recipe = True
-                
-                # レシピの各材料をチェック
-                for recipe_kitchen_object_so in waiting_recipe_so.kitchen_object_so_list:
-                    ingredient_found = False
-                    
-                    # 皿の材料と照合
-                    for plate_kitchen_object_so in plate_ingredients:
-                        if plate_kitchen_object_so == recipe_kitchen_object_so:
-                            ingredient_found = True
-                            break
-                    
-                    if not ingredient_found:
-                        plate_contents_matches_recipe = False
-                        break
-                
-                # 材料が完全に一致した場合
-                if plate_contents_matches_recipe:
-                    self._successful_recipes_amount += 1
-                    self._waiting_recipe_so_list.pop(i)
-                    
-                    # 成功イベント発火
-                    self.on_recipe_completed.invoke(self)
-                    self.on_recipe_success.invoke(self)
-                    return
-        
-        # 一致するレシピが見つからなかった場合
-        self.on_recipe_failed.invoke(self)
-    
-    def get_waiting_recipe_so_list(self) -> List[RecipeSO]:
-        """待機中のレシピリストを取得"""
-        return self._waiting_recipe_so_list.copy()
-    
-    def get_successful_recipes_amount(self) -> int:
-        """成功したレシピ数を取得"""
-        return self._successful_recipes_amount
-
-
-# 使用例
-if __name__ == "__main__":
-    # サンプルデータ作成
-    tomato = KitchenObjectSO("Tomato", 1)
-    lettuce = KitchenObjectSO("Lettuce", 2)
-    bread = KitchenObjectSO("Bread", 3)
-    
-    # サンプルレシピ
-    sandwich_recipe = RecipeSO("Sandwich", [bread, lettuce, tomato])
-    salad_recipe = RecipeSO("Salad", [lettuce, tomato])
-    
-    recipe_list = RecipeListSO([sandwich_recipe, salad_recipe])
-    
-    # ゲームマネージャーとデリバリーマネージャーを初期化
-    game_manager = KitchenGameManager.get_instance()
-    game_manager.start_game()
-    
-    delivery_manager = DeliveryManager.get_instance(recipe_list)
-    
-    # イベントハンドラーの設定
-    def on_recipe_spawned(sender, args):
-        print("新しいレシピが生成されました！")
-    
-    def on_recipe_success(sender, args):
-        print("レシピ配達成功！")
-    
-    def on_recipe_failed(sender, args):
-        print("レシピ配達失敗...")
-    
-    delivery_manager.on_recipe_spawned.add_handler(on_recipe_spawned)
-    delivery_manager.on_recipe_success.add_handler(on_recipe_success)
-    delivery_manager.on_recipe_failed.add_handler(on_recipe_failed)
-    
-    # サンプル実行
-    print("ゲーム開始...")
-    
-    # 5秒間更新処理を実行
-    start_time = time.time()
-    while time.time() - start_time < 5:
-        delivery_manager.update()
-        time.sleep(0.1)  # 100ms間隔で更新
-    
-    print(f"待機中のレシピ数: {len(delivery_manager.get_waiting_recipe_so_list())}")
-    
-    # サンプル配達テスト
-    plate = PlateKitchenObject()
-    plate.add_kitchen_object(bread)
-    plate.add_kitchen_object(lettuce)
-    plate.add_kitchen_object(tomato)
-    
-    print("サンドイッチを配達...")
-    delivery_manager.deliver_recipe(plate)
-    
-    print(f"成功したレシピ数: {delivery_manager.get_successful_recipes_amount()}")
-```
+> aside positive
+>
+> **ヒント：Next Edit Suggestが機能しない場合は**
+> 
+> メニューから
+> - **Windows/Linux**: `File` → `Preferences` → `Settings`
+> - **macOS**: `Code` → `Settings...` → `Settings`
+> 
+> 以下の設定を検索し、有効化してください。
+> ```
+> github.copilot.nextEditSuggestions.enabled
+> ```
 
 ## コードを解説してもらう
 Duration: 15
 
-Copilot Chat にこのコードを解説させてみましょう。
+プロジェクトに含まれている `delivery_manager.py` ファイルを開いてください。
 
 ### Copilot Chat を開く
 
@@ -679,6 +289,70 @@ DeliveryManagerクラスに存在する問題点を列挙してください。�
 > aside positive
 >
 > **重要**: エージェントモードでは、Copilotがより自律的に動作するため、提案される変更内容をよく確認してから受け入れるようにしましょう。
+
+## カスタムエージェントを使ってみよう（オプション）
+Duration: 15
+
+**カスタムエージェント**は、**Copilot コーディングエージェント**の特殊なバージョンであり、独自のワークフロー、コーディング規則、ユースケースに合わせて調整できます。
+
+### BeastModeへの切り替え
+
+Copilot Chatのモード選択から「**beastmode3.1**」を選択します。
+
+### BeastModeを体験してみよう
+
+以下のプロンプトを入力して、エージェントの挙動の違いを確認してください：
+
+```
+このコードをプロダクション品質にアップグレードしてください。
+以下を全て実行してください：
+
+- セキュリティ脆弱性（SQLインジェクションなど）を調査して修正
+- 最新のPythonベストプラクティスを調べて適用
+- 型安全性を強化（typing、Protocol、TypedDictなど）
+- テスタビリティを改善（依存性注入、モック可能な設計）
+- パフォーマンスの問題を特定して最適化
+- 包括的なユニットテストを作成
+- 全てのテストが通ることを確認
+
+完了するまで自律的に作業を続けてください。
+```
+
+> aside positive
+>
+> **重要**: このプロジェクトには `.github/agents/beastmode3.1.agent.md` というファイルが含まれており、BeastModeの動作を定義しています。
+
+### BeastModeとは？
+
+BeastModeは、オープンナレッジとしてコミュニティ駆動で発展している取り組みです。以下のような課題を解決します：
+
+| 課題 | Beast Modeの特徴 |
+|------|------------------|
+| 途切れる | ✅ **完全自律実行** - タスク完了まで止まらない |
+| 知識が古い | ✅ **強制的なWeb調査** - 最新情報を必ず検索 |
+| 中途半端 | ✅ **徹底した品質基準** - テスト通過まで継続 |
+
+### VS Code設定での有効化
+
+BeastModeの考えはすでにGitHub Copilotの実装にも取り込まれており、VS Codeの設定でも利用できます：
+
+1. VS Codeの設定を開く
+2. 以下の設定を有効化：
+   ```
+   github.copilot.chat.alternategptprompt.enable
+   ```
+
+これにより、標準のCopilotエージェントでもBeastModeと同様の自律的な動作が可能になります。
+
+> aside positive
+>
+> **重要**: BeastModeは Sonnet4.5やGemini 3 Proのような大きなモデルで既に実行してくれている挙動の定義が多いです。そのため、規定のPremium Request数を全て消費した後のGPT-4.1やGPT-5miniなどのモデルでのBeastMode利用が有効になるのではないかと思います。
+>
+> **参考リソース**:
+> GitHubが公開しているPromptやAgentのサンプルがまとまっているリポジトリがあります：
+> ユースケース別、言語別などさまざまなサンプルがあるので、ぜひご参照ください。
+> 
+> [GitHub Awesome Copilot](https://github.com/github/awesome-copilot)
 
 ## 次のタスクに向けた設定（オプション）
 Duration: 20

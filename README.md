@@ -2,6 +2,13 @@
 
 このリポジトリは、GitHub Copilotのワークショップ用のCodelabsコンテンツを管理しています。
 
+## 🌐 アクセス方法
+
+ワークショップコンテンツは以下のURLからアクセスできます：
+
+https://moulongzhang.github.io/2025-Github-Copilot-Workshop/github-copilot-workshop
+
+
 ## 📚 概要
 
 GitHub Copilotの機能を学ぶためのハンズオンワークショップです。エージェントモードを使った新規アプリケーション開発など、実践的な内容を含んでいます。
